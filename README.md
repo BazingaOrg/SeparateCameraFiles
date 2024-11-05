@@ -9,11 +9,16 @@
 - 保持原有的文件夹结构
 - 详细的处理进度和结果统计
 
+## 安装和构建
+
+- 安装依赖：npm install
+- 构建项目：npm run build
+
 ## 使用方法
 
 ### 基本语法
 ```bash
-node index.js <源文件夹路径> [文件类型]
+npm start -- <源文件夹路径> [文件类型]
 ```
 
 ### 使用示例
@@ -21,31 +26,38 @@ node index.js <源文件夹路径> [文件类型]
 1. 基本用法（使用默认设置）：
 ```bash
 # 将处理默认路径下的 RW2 文件
-node index.js '/Volumes/Photos/DCIM'
+npm start -- '/Volumes/Photos/DCIM'
 ```
 
 2. 处理单个文件类型：
 ```bash
 # 处理 RW2 文件
-node index.js '/Volumes/Photos/DCIM' 'RW2'
+npm start -- '/Volumes/Photos/DCIM' 'RW2'
 ```
 
 3. 处理多个文件类型（分别存放）：
 ```bash
 # RW2 和 MP4 文件将分别存放在 RW2 和 MP4 文件夹中
-node index.js '/Volumes/Photos/DCIM' 'RW2,MP4'
+npm start -- '/Volumes/Photos/DCIM' 'RW2,MP4'
 ```
 
 4. 处理多个文件类型（合并存放）：
 ```bash
 # RW2 和 MP4 文件将合并存放在 RW2+MP4 文件夹中
-node index.js '/Volumes/Photos/DCIM' '[RW2,MP4]'
+npm start -- '/Volumes/Photos/DCIM' '[RW2,MP4]'
 ```
 
 5. 处理包含空格的路径：
 ```bash
 # 路径包含空格时需要使用引号
-node index.js '/Volumes/My Photos/2024 Collection' 'RW2'
+npm start -- '/Volumes/My Photos/2024 Collection' 'RW2'
+```
+
+## 开发模式
+
+如果你想在开发过程中实时查看更改效果，可以使用：
+```bash
+npm run dev
 ```
 
 ## 注意事项
